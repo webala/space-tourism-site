@@ -1,0 +1,50 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    position: relative;
+
+    .nav_items {
+        display: none;
+    }
+
+    .logo {
+        width: 40px;
+        height: auto !important; 
+    }
+
+    .hamburger {
+       height: 20px;
+       width: auto;
+    }
+
+    .nav_items.toggle {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        backdrop-filter: blur(16px);
+        color: white;
+        height: 100vh;
+        padding: 50px 70px;
+
+        .close {
+            width: 20px;
+            height: auto;
+            position: absolute;
+            right: 25px;
+            top: 25px;
+        }
+
+        .nav_item {
+            margin: 25px 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
