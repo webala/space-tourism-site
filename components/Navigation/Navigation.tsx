@@ -9,6 +9,7 @@ import Link from "next/link";
 function Navigation() {
 
     const [navToggle, setNavToggle] = useState(false)
+
 	return (
 		<div className={style.navigation}>
 			<Image
@@ -18,6 +19,7 @@ function Navigation() {
 				height={100}
 				width={100}
 			/>
+            <div className={style.line}></div>
 			<div className={!navToggle ? `${style.nav_items}`: `${style.nav_items} ${style.toggle}`}>
             <Image
 				className={style.close}
