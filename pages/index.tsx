@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Call from "../components/Call/Call";
 import Navigation from "../components/Navigation/Navigation";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/global.module.scss";
 
 export default function Home() {
 	return (
