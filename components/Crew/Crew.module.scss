@@ -1,0 +1,145 @@
+.crew {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: fit-content;
+	justify-content: center;
+    margin-bottom: 100px;
+
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 10%;
+		border-bottom: 1px solid white;
+
+		.crew_image {
+			width: 60%;
+			height: auto;
+            
+            @media (min-width: 1028px) {
+                width: auto;
+                height: 60vh;
+            }
+		}
+
+        @media (min-width: 1028px) {
+           margin: 0;
+           border: none
+        }
+	}
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 50px 0;
+
+		.nav {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+
+			.indicator {
+				height: 13px;
+				width: 13px;
+				background: gray;
+				border-radius: 50%;
+			}
+
+			.indicator.active {
+				background: white;
+			}
+
+            @media (min-width: 1028px) {
+                margin-top: 100px;
+            }
+		}
+
+		.bio {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0 10%;
+
+			.role,
+			.name {
+				font-family: "Bellefair", serif;
+				font-weight: 200;
+				text-transform: uppercase;
+				margin: 40px 0 10px 0;
+				font-size: 19px;
+
+                @media (min-width: 768px) {
+                    font-size: 30px;
+                }
+
+                @media (min-width: 1028px) {
+                    font-size: 40px;
+                }
+			}
+
+            .role {
+                opacity: .5;
+            }
+
+			.name {
+				font-weight: 400;
+				margin: 5px 0 20px 0;
+				font-size: 25px;
+
+                @media (min-width: 768px) {
+                    font-size: 40px;
+                }
+
+                @media (min-width: 1028px) {
+                    font-size: 60px;
+                }
+			}
+
+			.bio {
+				padding: 0;
+				text-align: center;
+				line-height: 30px;
+				font-size: 18px;
+				font-weight: 300;
+
+                @media (min-width: 768px) {
+                    margin-bottom: 40px;
+                }
+
+                @media (min-width: 1028px) {
+                    text-align: start;
+                    width: 60%;
+                }
+			}
+
+            @media (min-width: 1028px) {
+                align-items: flex-start;
+                padding: 0;
+            }
+		}
+
+        @media (min-width: 768px) {
+            flex-direction: column-reverse;
+            margin: 0 0 60px 0;
+        }
+        
+        @media (min-width: 1028px) {
+            align-items: flex-start;
+        }
+	}
+
+    @media (min-width: 768px) {
+        flex-direction: column-reverse;
+        padding: 0 15%;
+    }
+
+    @media (min-width: 1028px) {
+        flex-direction: row-reverse;
+        padding: 0 10%;
+        justify-content: space-between;
+        gap: 60px;
+        margin-bottom: 200px;
+    }
+}
