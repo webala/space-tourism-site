@@ -8,7 +8,7 @@ import europaImage from "../public/assets/destination/image-europa.png";
 import titanImage from "../public/assets/destination/image-titan.png";
 import Destination from "../components/Destination/Destination";
 
-function destinations() {
+function Destinatinos() {
 	const destData = data.destinations;
 	const [destination, setDestination] = useState(destData[0]);
 	const [img, setImg] = useState(moonImage);
@@ -39,4 +39,4 @@ function destinations() {
 	);
 }
 
-export default destinations;
+export default Destinatinos;

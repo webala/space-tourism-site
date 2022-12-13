@@ -8,7 +8,11 @@ function Crew({ crew, img, index }) {
 		<div className={style.crew}>
 			<div className={style.hero}>
 				{index !== 0 ? (
-					<AnimationOnScroll animateIn="animate__backInRight" delay={200} className={style.animated_hero}>
+					<AnimationOnScroll
+						animateIn="animate__backInRight"
+						delay={200}
+						className={style.animated_hero}
+					>
 						<Image
 							className={style.crew_image}
 							src={img}
@@ -30,10 +34,34 @@ function Crew({ crew, img, index }) {
 
 			<div className={style.details}>
 				<div className={style.nav}>
-					<div className={crew.name === "Douglas Hurley" ?`${style.indicator} ${style.active}` : `${style.indicator}`}></div>
-					<div className={crew.name === "Mark Shuttleworth" ?`${style.indicator} ${style.active}` : `${style.indicator}`}></div>
-					<div className={crew.name === "Victor Glover" ?`${style.indicator} ${style.active}` : `${style.indicator}`}></div>
-					<div className={crew.name ===  "Anousheh Ansari" ?`${style.indicator} ${style.active}` : `${style.indicator}`}></div>
+					<div
+						className={
+							crew.name === "Douglas Hurley"
+								? `${style.indicator} ${style.active}`
+								: `${style.indicator}`
+						}
+					></div>
+					<div
+						className={
+							crew.name === "Mark Shuttleworth"
+								? `${style.indicator} ${style.active}`
+								: `${style.indicator}`
+						}
+					></div>
+					<div
+						className={
+							crew.name === "Victor Glover"
+								? `${style.indicator} ${style.active}`
+								: `${style.indicator}`
+						}
+					></div>
+					<div
+						className={
+							crew.name === "Anousheh Ansari"
+								? `${style.indicator} ${style.active}`
+								: `${style.indicator}`
+						}
+					></div>
 				</div>
 
 				<div className={style.bio}>

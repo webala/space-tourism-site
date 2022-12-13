@@ -9,10 +9,9 @@ import data from "../data.json";
 import style from "../styles/global.module.scss";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-function crew() {
+function Crew() {
 	const crewData = data.crew;
-	const [crew, setCrew] = useState(crewData[0]);
-	const [crewImg, setCrewImg] = useState(dougImg);
+	
 	return (
 		<div className={style.crew_container}>
 			<Navigation />
@@ -44,4 +43,4 @@ function crew() {
 	);
 }
 
-export default crew;
+export default Crew;

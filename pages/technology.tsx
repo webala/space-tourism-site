@@ -34,7 +34,14 @@ function technology() {
 					landscapeImg = capsuleLandscape;
 					portraitImg = capsulePortrait;
 				}
-				return <Thechnology data={data} key={index} landscapeImg={landscapeImg} portraitImg={portraitImg}/>;
+				return (
+					<Thechnology
+						data={data}
+						key={index}
+						landscapeImg={landscapeImg}
+						portraitImg={portraitImg}
+					/>
+				);
 			})}
 		</div>
 	);
