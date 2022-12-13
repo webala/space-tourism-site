@@ -14,11 +14,17 @@ function crew() {
 	const [crew, setCrew] = useState(crewData[0]);
 	const [crewImg, setCrewImg] = useState(dougImg);
 	return (
-		<div className={style.crew}>
+		<div className={style.crew_container}>
 			<Navigation />
-			<AnimationOnScroll animateIn="animate__rubberBand" initiallyVisible={true}>
+			<AnimationOnScroll
+				animateIn="animate__rubberBand"
+				initiallyVisible={true}
+			>
 				<div className={style.title}>
-					<h1> <span>02</span>  MEET YOUR CREW</h1>
+					<h1>
+						{" "}
+						<span>02</span> MEET YOUR CREW
+					</h1>
 				</div>
 			</AnimationOnScroll>
 			{crewData.map((data, index) => {
@@ -32,7 +38,7 @@ function crew() {
 				} else if (data.name === "Anousheh Ansari") {
 					img = anoushImg;
 				}
-				return <Crew img={img} crew={data} key={index} index={index}/>;
+				return <Crew img={img} crew={data} key={index} index={index} />;
 			})}
 		</div>
 	);

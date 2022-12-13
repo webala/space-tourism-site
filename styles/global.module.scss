@@ -20,13 +20,14 @@
   }
 }
 
-.crew {
+.crew_container {
   background: url('../public/assets/crew/background-crew-mobile.jpg');
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 100px;
+  overflow-x: hidden;
 
   .title {
     font-size: 12px;
