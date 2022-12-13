@@ -6,10 +6,12 @@ import Image from "next/image";
 import React, {useState} from "react";
 import Link from "next/link";
 
+
 function Navigation() {
 
     const [navToggle, setNavToggle] = useState(false)
 
+	
 	return (
 		<div className={style.navigation}>
 			<Image
@@ -31,19 +33,19 @@ function Navigation() {
 			/>
 				<div className={style.nav_item}>
 					<p>00</p>
-					<Link href="#">Home</Link>
+					<Link href="/">Home</Link>
 				</div>
 				<div className={style.nav_item}>
 					<p>01</p>
-					<Link href="#">Destination</Link>
+					<Link href="/destinations">Destination</Link>
 				</div>
 				<div className={style.nav_item}>
 					<p>02</p>
-					<Link href="#">Crew</Link>
+					<Link href="/crew">Crew</Link>
 				</div>
 				<div className={style.nav_item}>
 					<p>03</p>
-					<Link href="#">Technology</Link>
+					<Link href="/technology">Technology</Link>
 				</div>
 			</div>
 			<Image

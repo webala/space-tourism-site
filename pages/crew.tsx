@@ -32,7 +32,7 @@ function crew() {
 				} else if (data.name === "Anousheh Ansari") {
 					img = anoushImg;
 				}
-				return <Crew img={img} crew={data} key={index} />;
+				return <Crew img={img} crew={data} key={index} index={index}/>;
 			})}
 		</div>
 	);
