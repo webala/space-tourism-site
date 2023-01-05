@@ -15,7 +15,7 @@ function Call() {
 				praesentium qui ut. Quia sequi vitae architecto?
 			</p>
 			<div className={style.circle}>
-				<Link href="#">
+				<Link href="/destinations">
 					<h1>EXPLORE</h1>
 				</Link>
 			</div>
