@@ -9,7 +9,7 @@ import data from "../data.json";
 import style from "../styles/global.module.scss";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-function Crew() {
+function crew() {
 	const crewData = data.crew;
 	
 	return (
@@ -43,4 +43,4 @@ function Crew() {
 	);
 }
 
-export default Crew;
+export default crew;

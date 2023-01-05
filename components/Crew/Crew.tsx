@@ -3,7 +3,22 @@ import React from "react";
 import style from "./Crew.module.scss";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-function Crew({ crew, img, index }) {
+interface iCrew {
+	name: string;
+	images: {
+		png: string;
+		webp: string;
+	};
+	role: string;
+	bio: string
+}
+
+interface iCrewProps {
+	crew: iCrew;
+	img: any;
+	index: number;
+}
+function Crew({ crew, img, index }: iCrewProps) {
 	return (
 		<div className={style.crew}>
 			<div className={style.hero}>

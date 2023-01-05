@@ -1,20 +1,38 @@
 import React, { useEffect, useState } from "react";
 import style from "./Technology.module.scss";
-import launchImgLandscape from "../../public/assets/technology/image-launch-vehicle-landscape.jpg";
-import launchImgPortrait from "../../public/assets/technology/image-launch-vehicle-portrait.jpg";
 import Image from "next/image";
 
-function Technology({data, landscapeImg, portraitImg}) {
+interface iTechology {
+	name: string;
+	images: {
+		portrait: string;
+		landscape: string;
+	};
+	description: string;
+}
+
+interface iTechnologyProps {
+   data: iTechology;
+   landscapeImg: any;
+   portraitImg: any;
+}
+
+interface iDimensions {
+	width: number;
+	height: number;
+}
+
+function Technology({data, landscapeImg, portraitImg}: iTechnologyProps) {
 	const hasWindow = typeof window !== "undefined";
-	function getWindowDimensions() {
-		// const { innerWidth: width, innerHeight: height } = window;
-		const width = hasWindow ? window.innerWidth : null;
-		const height = hasWindow ? window.innerHeight : null;
-		return {
-			width,
-			height,
-		};
-	}
+	function getWindowDimensions(): iDimensions {
+      // const { innerWidth: width, innerHeight: height } = window;
+      const width: number = hasWindow ? window.innerWidth : 0;
+      const height = hasWindow ? window.innerHeight : 0;
+      return {
+         width,
+         height,
+      };
+   }
 
 	function useWindowDimensions() {
 		const [windowDimensions, setWindowDimensions] =
@@ -32,7 +50,7 @@ function Technology({data, landscapeImg, portraitImg}) {
 		return windowDimensions;
 	}
 
-	let dimensions = useWindowDimensions()
+	let dimensions: iDimensions = useWindowDimensions()
 	
 	return (
 		<div className={style.technology}>

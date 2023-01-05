@@ -1,8 +1,26 @@
 import Image from "next/image";
-import React from "react";
+import React, { SetStateAction } from "react";
 import style from "./Destination.module.scss";
 
-function Destination({ destination, img, setDestination, destData }) {
+interface iDestination {
+	name: string;
+	images: {
+		png: string;
+		webp: string;
+	},
+	description: string;
+	distance: string;
+	travel: string;
+}
+
+interface iDestinationProps {
+	destination: iDestination;
+	img: any;
+	setDestination: React.Dispatch<SetStateAction<iDestination>>;
+	destData: iDestination[];
+}
+
+function Destination({ destination, img, setDestination, destData }: iDestinationProps) {
 	return (
 		<div className={style.destination}>
 			<div className={style.hero}>
